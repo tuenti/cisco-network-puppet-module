@@ -162,7 +162,7 @@ Puppet::Type.type(:cisco_interface).provide(:cisco) do
     @property_flush = {}
   end
 
-  def self.properties_get(interface_name, nu_obj, all_intf: nil)
+  def self.properties_get(interface_name, nu_obj, all_intf= nil)
     debug "Checking instance, #{interface_name}."
     current_state = {
       interface: interface_name,
